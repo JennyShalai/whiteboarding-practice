@@ -30,9 +30,9 @@ func consecuative(array: [Int]) -> String {
         // case for the last element in array
         } else {
             if begin == end {
-                out += "\(array[begin]), "
+                out += "\(array[begin])"
             } else {
-                out += "\(array[begin])-\(array[end]), "
+                out += "\(array[begin])-\(array[end])"
             }
         }
     }
@@ -40,3 +40,4 @@ func consecuative(array: [Int]) -> String {
 }
 
 print(consecuative(array: input))
+// 1-2, 10, 15-17, 20-22, 24
