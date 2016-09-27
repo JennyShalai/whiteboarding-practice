@@ -10,7 +10,7 @@ func consecuative(array: [Int]) -> String {
     var next: Int = 0
     var out: String = ""
     
-    for (ind, _) in array.enumerated() {
+    for ind in 0..<array.count {
         // for all elements but last one
         if ind + 1 < array.count {
             next = ind + 1
