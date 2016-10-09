@@ -35,6 +35,7 @@ func check(coordinats: [Int], delta: Int) {
     let y: Int = coordinats.first!
     let N: Int = matrix[0].count
     
+    // check right position
     if x+1 < N {
         if matrix[y][x+1] == 0 || matrix[y][x+1] > delta + 1 {
             matrix[y][x+1] = delta + 1
@@ -42,6 +43,7 @@ func check(coordinats: [Int], delta: Int) {
         }
     }
     
+    // check left position
     if x-1 >= 0 {
         if matrix[y][x-1] == 0 || matrix[y][x-1] > delta + 1 {
             matrix[y][x-1] = delta + 1
@@ -49,6 +51,7 @@ func check(coordinats: [Int], delta: Int) {
         }
     }
     
+    // check bottom position
     if y+1 < N {
         if matrix[y+1][x] == 0 || matrix[y+1][x] > delta + 1 {
             matrix[y+1][x] = delta + 1
@@ -56,6 +59,7 @@ func check(coordinats: [Int], delta: Int) {
         }
     }
     
+    // check top position
     if y-1 >= 0 {
         if matrix[y-1][x] == 0 || matrix[y-1][x] > delta + 1 {
             matrix[y-1][x] = delta + 1
@@ -87,12 +91,12 @@ for i in 0..<matrix.first!.count {
     print(matrix[i])
 }
 
-
 // [4, 3, 2, 3, 4]
 // [3, 2, 1, 2, 3]
 // [2, 1, 0, 1, 2]
 // [3, 2, 1, 2, 3]
 // [4, 3, 2, 3, 4]
+
 
 
 print("")
