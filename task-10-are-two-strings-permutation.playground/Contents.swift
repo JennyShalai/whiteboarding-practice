@@ -32,17 +32,19 @@ func isPermutation(str1: String, str2: String) -> Bool {
     }
     
     // check that both strings have the make chars and the same amount of them
-    for (key, val) in dict1 {
-        if dict2[key] == nil || dict2[key] != val {
-            result = false
-            print("Extra in first string: \(key) \(val) time(s)")
+    if (dict1 != dict2) {
+        for (key, val) in dict1 {
+            if dict2[key] == nil || dict2[key] != val {
+                result = false
+                print("Extra in first string: \(key) \(val) time(s)")
+            }
         }
-    }
-    
-    for (key, val) in dict2 {
-        if dict1[key] == nil || dict1[key] != val {
-            result = false
-            print("Extra in second string: \(key) \(val) time(s)")
+        
+        for (key, val) in dict2 {
+            if dict1[key] == nil || dict1[key] != val {
+                result = false
+                print("Extra in second string: \(key) \(val) time(s)")
+            }
         }
     }
     
