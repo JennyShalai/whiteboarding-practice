@@ -4,7 +4,7 @@ func compressString(str: String) -> String {
     
     var result: String = ""
     var char: String = String(str[str.startIndex])
-    var counter: Int = 0
+    var counter: Int = 1
     
     for i in 0..<str.characters.count {
         
