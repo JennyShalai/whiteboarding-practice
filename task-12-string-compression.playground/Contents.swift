@@ -19,11 +19,7 @@ func compressString(str: String) -> String {
         }
     }
     
-    if result.characters.count >= str.characters.count {
-        return str
-    }
-    
-    return result
+    return result.characters.count >= str.characters.count ? str : result
 }
 
 
