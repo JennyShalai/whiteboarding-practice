@@ -25,19 +25,29 @@ func removeDups(head: Node?) -> Node? {
     
     var current = head
     var stableNode = head
-    var dict: [Int: Int] = [:]
-    //var set: Set<Int> = []
+    // var dict: [Int: Int] = [:]
+    var set: Set<Int> = []
+    
+//    while current != nil {
+//        if dict[current!.value] == nil {
+//            dict[current!.value] = 1
+//            stableNode = current!
+//        } else {
+//            stableNode!.next = current!.next
+//        }
+//        current = current!.next
+//    }
     
     while current != nil {
-        if dict[current!.value] == nil {
-            dict[current!.value] = 1
+    
+        if set.insert(current!.value).inserted {
             stableNode = current!
         } else {
             stableNode!.next = current!.next
         }
+        
         current = current!.next
     }
-    
     
     return head
 }
