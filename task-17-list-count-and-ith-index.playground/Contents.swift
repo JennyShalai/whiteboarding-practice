@@ -63,18 +63,20 @@ print(countNodes(head: nil))    // 0
 
 ///////////      2. return Kth element       ////////////
 
-func node(AtIndex: Int, forList: Node?) -> Node? {
+func node(atIndex: Int, forList: Node?) -> Node? {
 
     var current = forList
     
-    if AtIndex >= 0 {
+    if atIndex >= 0 {
     
-        for _ in 0..<AtIndex {
+        for _ in 0..<atIndex {
             if current == nil {
                 return nil
             }
             current = current?.next
         }
+    } else {
+        return nil
     }
     
     return current
@@ -82,10 +84,36 @@ func node(AtIndex: Int, forList: Node?) -> Node? {
 
 let h2 = generateList()
 print(h2) //(1) -> (8) -> (9) -> (5) -> (9) -> (3) -> (0) -> (6) -> (4) -> (7) -> (4) -> (3) -> (1) -> (4) -> (2) -> (9) -> (7) -> (3) -> (1) -> (8) -> (0) -> (9) -> (7) -> (4) -> (4) -> (9) -> (1) -> (5) -> (9) -> (0) -> (8) -> nil
-print(node(AtIndex: 25, forList: h2))                           // (9) -> (1) -> (5) -> (9) -> (0) -> (8) -> nil
-print(node(AtIndex: 25, forList: nil))                          // nil
+print(node(atIndex: 25, forList: h2))                           // (9) -> (1) -> (5) -> (9) -> (0) -> (8) -> nil
+print(node(atIndex: 25, forList: nil))                          // nil
 
 
 
 
-///////////             ////////////
+///////////      3. value at index       ////////////
+
+func value(atIndex: Int, forList: Node?) -> Int {
+    
+    var current = forList
+    
+    if atIndex >= 0 {
+        for _ in 0..<atIndex {
+            if current == nil {
+                return -1
+            }
+            current = current?.next
+        }
+    } else {
+        return -1
+    }
+    
+    return current!.value
+}
+
+let h3 = generateList()
+print(h3) // (1) -> (8) -> (7) -> (2) -> (5) -> (9) -> (7) -> (4) -> (7) -> (8) -> (7) -> (0) -> (5) -> (3) -> (3) -> (5) -> (2) -> (9) -> (8) -> (7) -> (0) -> (5) -> (6) -> (6) -> (7) -> (4) -> (9) -> (8) -> (0) -> (3) -> (4) -> nil
+print(value(atIndex: 10, forList: h3))  // 7
+print(value(atIndex: 10, forList: nil)) // -1
+print(value(atIndex: 40, forList: h3))  // -1
+print(value(atIndex: -2, forList: h3))  // -1
+
