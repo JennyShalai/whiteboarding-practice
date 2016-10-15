@@ -1,12 +1,15 @@
 
 // working with linked list
-// 1. how many elements (nodes) in list
-// 2. what is Kth element in list
+// 1. count elements (nodes) in list
+// 2. K-th element in list
+// 3. value at index
+// 4. K-th element from the end (single linked list)
 
 import Foundation
 
-
-//////////////      list class       ////////////////
+/////////////////////////////////////////////////////////////////////
+//////////////      list class       ////////////////////////////////
+/////////////////////////////////////////////////////////////////////
 
 class Node : CustomStringConvertible {
     
@@ -25,8 +28,9 @@ class Node : CustomStringConvertible {
     }
 }
 
-
-//////////////      generate list       ////////////////
+/////////////////////////////////////////////////////////////////////
+//////////////      generate list       /////////////////////////////
+/////////////////////////////////////////////////////////////////////
 
 func generateList() -> Node {
     let h = Node.init(value: 1)
@@ -39,8 +43,9 @@ func generateList() -> Node {
     return h
 }
 
-
-///////////      1. count elements       /////////////
+/////////////////////////////////////////////////////////////////////
+///////////      1. count elements       ////////////////////////////
+/////////////////////////////////////////////////////////////////////
 
 func countNodes(head: Node?) -> Int {
     
@@ -60,8 +65,9 @@ let h1 = generateList()
 print(countNodes(head: h1))     // 31
 print(countNodes(head: nil))    // 0
 
-
-///////////      2. return Kth element       ////////////
+/////////////////////////////////////////////////////////////////////
+///////////      2. return Kth element       ////////////////////////
+/////////////////////////////////////////////////////////////////////
 
 func node(atIndex: Int, forList: Node?) -> Node? {
 
@@ -89,8 +95,9 @@ print(node(atIndex: 25, forList: nil))                          // nil
 
 
 
-
-///////////      3. value at index       ////////////
+/////////////////////////////////////////////////////////////////////
+///////////      3. value at index       ////////////////////////////
+/////////////////////////////////////////////////////////////////////
 
 func value(atIndex: Int, forList: Node?) -> Int {
     
@@ -116,4 +123,48 @@ print(value(atIndex: 10, forList: h3))  // 7
 print(value(atIndex: 10, forList: nil)) // -1
 print(value(atIndex: 40, forList: h3))  // -1
 print(value(atIndex: -2, forList: h3))  // -1
+
+/////////////////////////////////////////////////////////////////////
+///////////      4. K-th element from end      //////////////////////
+/////////////////////////////////////////////////////////////////////
+
+func fromEnd(offset: Int, forList: Node?) -> Node? {
+    
+    var current = forList
+    var result = forList
+    
+    if offset < 0 {
+        return nil
+    }
+    
+    for _ in 0..<offset {
+        if current == nil {
+            return nil
+        }
+        current = current!.next
+    }
+    
+    
+    while current?.next != nil {
+        current = current!.next
+        result = result!.next
+    }
+    
+    
+    return result
+}
+
+let h4 = generateList() // (1) -> (3) -> (8) -> (3) -> (3) -> (6) -> (5) -> (9) -> (6) -> (9) -> (1) -> (8) -> (0) -> (7) -> (4) -> (6) -> (9) -> (7) -> (4) -> (3) -> (2) -> (5) -> (1) -> (1) -> (1) -> (7) -> (5) -> (4) -> (5) -> (1) -> (7) -> nil
+print(h4)
+print(fromEnd(offset: 0, forList: h4))  // (7) -> nil
+
+
+/////////////////////////////////////////////////////////////////////
+///////////      5.       //////////////////////
+/////////////////////////////////////////////////////////////////////
+
+
+
+
+
 
