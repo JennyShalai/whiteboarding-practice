@@ -8,7 +8,7 @@ func change(mta: Int, cost: Int) -> [String: Int] {
     bill -= cost
     
     let dollors: Int = bill / 100
-    dict["dollor"] = dollors
+    dict["dollar"] = dollors
     bill -= dollors * 100
     
     let quaters: Int = bill / 25
@@ -16,20 +16,20 @@ func change(mta: Int, cost: Int) -> [String: Int] {
     bill -= quaters * 25
     
     let dims: Int = bill / 10
-    dict["dims"] = dims
+    dict["dime"] = dims
     bill -= dims * 10
     
     let nics: Int = bill / 5
-    dict["nics"] = nics
+    dict["nickel"] = nics
     bill -= nics * 5
     
-    dict["pens"] = bill
+    dict["penny"] = bill
     
     return dict
 }
 
 print(change(mta: 500, cost: 109))
-// ["nics": 1, "dollor": 3, "dims": 1, "quater": 3, "pens": 1]
+// ["nickel": 1, "dollar": 3, "penny": 1, "quater": 3, "dime": 1]
 
 print(change(mta: 500, cost: 103))
-// ["nics": 0, "dollor": 3, "dims": 2, "quater": 3, "pens": 2]
+// ["nickel": 0, "dollar": 3, "penny": 2, "quater": 3, "dime": 2]
