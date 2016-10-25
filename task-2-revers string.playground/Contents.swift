@@ -1,7 +1,3 @@
-//: Playground - noun: a place where people can play
-
-import UIKit
-
 
 
 func revers(string: String) -> String {
@@ -15,12 +11,19 @@ func revers(string: String) -> String {
     
     // swope chars
     while leftIndex < rightIndex {
+        
         let left = array[leftIndex]
+        print("left \(left)")
         let right = array[rightIndex]
-        array.remove(at: leftIndex)
-        array.insert(right, at: leftIndex)
-        array.remove(at: rightIndex)
-        array.insert(left, at: rightIndex)
+        print("right \(right)")
+        
+        
+        print(array)                        // ["a", "b", "c", "d", "e"]
+        array.remove(at: leftIndex)         //      ["b", "c", "d", "e"]
+        array.insert(right, at: leftIndex)  // ["e", "b", "c", "d", "e"]
+        array.remove(at: rightIndex)        // ["e", "b", "c", "d"]
+        array.insert(left, at: rightIndex)  // ["e", "b", "c", "d", "a"]
+        
         leftIndex += 1
         rightIndex -= 1
     }
@@ -31,5 +34,5 @@ func revers(string: String) -> String {
 
 
 
-var str = "0987654321"
-let answer = revers(string: str)
+var str = "abcde"
+let answer = revers(string: str)    // "edcba"
