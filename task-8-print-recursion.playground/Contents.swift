@@ -6,28 +6,37 @@ var str = "Hello, playground!"
 
 ///////////////////   print with recursion   //////////////////////
 
-func printString(str: String, position: Int) {
-
-    print("\(str[str.index(str.startIndex, offsetBy: position)])")
+func printStringWithRecursion(str: String) {
     
-    if position + 1 < str.characters.count {
-        printString(str: str, position: position + 1)
+    if str.characters.count > 0 {
+        print("! \(str.characters.first!)")
     }
+    
+    let stringWithoutPrintedChar = str[str.characters.index(after: str.characters.startIndex)..<str.endIndex]
+    
+    if stringWithoutPrintedChar.characters.count > 0 {
+        printStringWithRecursion(str: stringWithoutPrintedChar)
+    }
+    
 }
 
+
+printStringWithRecursion(str: str)
 
 ///////////////////   print with loop   ///////////////////////////
 
 
-func printStr(str: String) {
+func printString(str: String) {
 
     for i in 0..<str.characters.count {
         print("\(str[str.index(str.startIndex, offsetBy: i)])")
     }
 }
 
+//printString(str: str)
+
+///////////////////////////////////////////////////////////////////
 
 
-printString(str: str, position: 0)
-print("---")
-printStr(str: str)
+
+
