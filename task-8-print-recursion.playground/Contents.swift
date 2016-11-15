@@ -35,8 +35,27 @@ func printString(str: String) {
 
 //printString(str: str)
 
+//////////////////     print second word    ///////////////////////
+
+func secondWord(value: String) -> String {
+    
+    let c = value.characters
+    
+    if let space = c.index(of: " ") {
+        
+        return value[c.index(after: space)..<value.endIndex]
+    }
+    
+    return ""
+}
+
+
+print(secondWord(value: "orange cat"))              // cat
+print(secondWord(value: "black dog"))               // dog
+print(secondWord(value: "multicolored parrot"))     // parrot
+
+
+
 ///////////////////////////////////////////////////////////////////
-
-
 
 
