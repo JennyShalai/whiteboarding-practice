@@ -18,9 +18,10 @@ class Node: CustomStringConvertible {
     }
 }
 
-// generate linked list
+// generate linked list: (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> (8) -> (9) -> (nil)
 let head = Node.init(val: 1)
 var stable = head
+
 
 for i in 2..<10 {
     let newNode = Node.init(val: i)
@@ -38,10 +39,14 @@ func reverseList(head: Node?) -> Node? {
         return nil
     }
     
+    if head!.next == nil {
+        return head!
+    }
+    
     var resultHead = Node.init(val: head!.value)
     var resultCurrent = resultHead
     
-    var current = head
+    var current = head!.next
     while current != nil {
         
         let newNode = Node.init(val: current!.value)
@@ -58,4 +63,4 @@ func reverseList(head: Node?) -> Node? {
     
 }
 
-print(reverseList(head: head))
+print(reverseList(head: head))  // (9) -> (8) -> (7) -> (6) -> (5) -> (4) -> (3) -> (2) -> (1) -> (nil)
