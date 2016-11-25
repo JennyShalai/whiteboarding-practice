@@ -39,6 +39,53 @@ func answerWithRecursion(string: String) -> String {
 
 ///////////////////////   no recursion   //////////////////////////
 
-print(answerWithRecursion(string: "ccdddedcc"))
+class Stack {
+    
+    var stack: [Character] = []
+    
+    func push(char: Character) {
+        self.stack.append(char)
+    }
+    
+    func peek() -> Character? {
+        if self.stack.count == 0 {
+            return nil
+        } else {
+            return self.stack.last!
+        }
+    }
+    
+    func pop() {
+        if self.stack.count > 0 {
+            self.stack.remove(at: self.stack.count-1)
+        }
+    }
+    
+}
+
+func answerNoRecursion(string: String) -> String {
+    let stack = Stack()
+    for char in string.characters {
+        if stack.peek() != char {
+            stack.push(char: char)
+        } else {
+            stack.pop()
+        }
+    }
+    var result = ""
+    for ch in stack.stack {
+       result.append(ch)
+    }
+    return result
+}
+
+
+///////////////////////////////////////////////////////////////////
+
+
+print("1: \(answerWithRecursion(string: "accdddedcc"))")    // aded
+print("2: \(answerWithRecursion(string: "cdeedcn"))")       // n
+print("3: \(answerNoRecursion(string:   "accdddedcc"))")    // aded
+print("4: \(answerNoRecursion(string:   "cdeedcn"))")       // n
 
 
