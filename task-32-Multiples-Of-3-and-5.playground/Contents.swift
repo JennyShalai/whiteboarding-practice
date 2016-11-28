@@ -8,8 +8,8 @@
 // how many numbers 5 is multipler? 999/5 = 199
 // sum of 333 numbers is ∑(from 1 to 333)*3 = ( (a1 + aN)*N/2 )*3 = ( (1 + 333)*333/2 )*3 = 166833
 // sum of 199 numbers is ∑(from 1 to 199)*5 = ( (a1 + aN)*N/2 )*5 = ( (1 + 199)*199/2 )*5 = 99500
-// but we count numbers for which and 3 and 5 are multiplers so we need to dicrement them
-// dicrement sum of 66 numbers ∑(from 1 to 66)*15 = ( (a1 + aN)*N/2 )*15 = ( (1 + 66)*66/2 )*15 = 33165
+// but we count numbers for which and 3 and 5 are multiplers so we need to decrement them
+// decrement sum of 66 numbers ∑(from 1 to 66)*15 = ( (a1 + aN)*N/2 )*15 = ( (1 + 66)*66/2 )*15 = 33165
 // result = 166833 + 99500 - 33165 = 233168
 
 
