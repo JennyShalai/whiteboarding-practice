@@ -27,11 +27,10 @@ func largestPrimeFactor(number: Int) -> Int {
         } else {
             prime = nextPrimeAfter(number: prime)
         }
-        
-        
     }
 }
 
+// check is a given number prime
 func isPrime(number: Int) -> Bool {
     switch number {
     case 0, 1:
@@ -52,10 +51,10 @@ func isPrime(number: Int) -> Bool {
             j = 6 - j
         }
     }
-    
     return true
 }
 
+// return next prime number follows given number
 func nextPrimeAfter(number: Int) -> Int {
     switch number {
     case 1:
@@ -88,8 +87,8 @@ print("time: \(end.rawValue - start.rawValue)")         // time: ~0.7519 sec
 let startDate = Date()
 print(largestPrimeFactor(number: 600851475143))         // 6857
 let endDate = Date()
-print("time \(endDate.timeIntervalSince(startDate))")   // time: ~0.7945 sec
+print("time \(endDate.timeIntervalSince(startDate))")   // time: 0.7945 sec
 
 
-print(largestPrimeFactor(number: 13195))            // 29
-print(largestPrimeFactor(number: 12))               // 3
+print(largestPrimeFactor(number: 13195))                // 29
+print(largestPrimeFactor(number: 12))                   // 3
