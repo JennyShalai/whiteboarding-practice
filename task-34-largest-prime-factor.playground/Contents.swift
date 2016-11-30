@@ -1,6 +1,8 @@
 // The prime factors of 13195 are 5, 7, 13 and 29.
 // What is the largest prime factor of the number 600851475143 ?
 
+import Foundation
+
 func largestPrimeFactor(number: Int) -> Int {
     
     var input = number
@@ -78,6 +80,16 @@ func nextPrimeAfter(number: Int) -> Int {
     }
 }
 
-print(largestPrimeFactor(number: 600851475143))     // 6857
+let start = DispatchTime.now()
+print(largestPrimeFactor(number: 600851475143))         // 6857
+let end = DispatchTime.now()
+print("time: \(end.rawValue - start.rawValue)")         // time: ~0.7519 sec
+
+let startDate = Date()
+print(largestPrimeFactor(number: 600851475143))         // 6857
+let endDate = Date()
+print("time \(endDate.timeIntervalSince(startDate))")   // time: ~0.7945 sec
+
+
 print(largestPrimeFactor(number: 13195))            // 29
 print(largestPrimeFactor(number: 12))               // 3
