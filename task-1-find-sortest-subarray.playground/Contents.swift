@@ -2,7 +2,7 @@
 
 import UIKit
 
-let myArray = [7,5,4,6,7,5,5,4,7,5]
+let myArray = [7,5,6,6,7,5,5,4,7,5]
 
 func find(input: [Int]) -> [Int] {
     var startIndex: Int = 0

@@ -16,7 +16,7 @@ class Node : CustomStringConvertible {
     }
     
     init(value: Int) {
-        self.value = value;
+        self.value = value
     }
 }
 

@@ -2,7 +2,7 @@
 
 import UIKit
 
-let input = [1, 2, 10, 15, 16, 17,  20, 21, 22, 24]
+let input = [1, 2, 10, 15, 16, 17, 20, 21, 22, 24]
 
 func consecuative(array: [Int]) -> String {
     var begin: Int = 0

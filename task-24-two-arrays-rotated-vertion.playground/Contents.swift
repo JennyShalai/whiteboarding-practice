@@ -13,13 +13,20 @@ func rotatedVertion(array1: [Int], array2: [Int]) -> Bool {
     if first1 != nil {
     
         if !array2.contains(first1!) {
-            result = false
-        } else {
-            var temp: [Int] = []
-            
+            return false
         }
+        
+        
+        
+        
     }
     
     
     return result
 }
+
+
+
+print(rotatedVertion(array1: [1,2,1,4,5], array2: [1,4,5,1,2]))
+//print(rotatedVertion(array1: [1,1,3,4,5], array2: [3,4,5,1,2]))
+//print(rotatedVertion(array1: [1,2,1,4,8], array2: [1,4,8,1,2]))
