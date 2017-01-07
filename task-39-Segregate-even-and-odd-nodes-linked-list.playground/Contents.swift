@@ -101,11 +101,11 @@ print(printNodes(head: segregateEvenOddNodes(head: nil)))   // nil
 
 let headOdd = Node.init(value: 3)
 headOdd.next = Node.init(value: 1)
-
+                                                                // 3 1
 print(printNodes(head: segregateEvenOddNodes(head: headOdd)))   // 3 1
 
 
 let headEven = Node.init(value: 4)
-headOdd.next = Node.init(value: 6)
-
-print(printNodes(head: segregateEvenOddNodes(head: headEven)))   // 4
+headEven.next = Node.init(value: 6)
+                                                                 // 4 6
+print(printNodes(head: segregateEvenOddNodes(head: headEven)))   // 4 6
