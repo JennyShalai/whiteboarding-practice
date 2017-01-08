@@ -61,4 +61,17 @@ class Tree {
         }
     }
     
+    func printTree(head: TreeNode) {
+        
+        if head.left != nil {
+            printTree(head: head.left!)
+        }
+        
+        print("\(head.value)")
+        
+        if head.right != nil {
+            printTree(head: head.right!)
+        }
+    }
+    
 }
