@@ -8,6 +8,31 @@ class ListNode {
     init(value: Int) {
         self.value = value
     }
+    
+}
+
+class List {
+    var head: ListNode
+    
+    init(head: ListNode) {
+        self.head = head
+    }
+    
+    func printNodes() -> String {
+        
+        var result = "List: "
+        var node: ListNode? = self.head
+        
+        while true {
+            if node == nil {
+                result += "nil"
+                return result
+            } else {
+                result += "\(String(node!.value)) "
+                node = node!.next
+            }
+        }
+    }
 }
 
 class TreeNode {
@@ -17,14 +42,6 @@ class TreeNode {
     var parent: TreeNode?
     init(value: Int) {
         self.value = value
-    }
-}
-
-class Tree {
-    var head: TreeNode
-    
-    init(head: TreeNode) {
-        self.head = head
     }
     
     func addNode(node: TreeNode?) {
@@ -36,7 +53,7 @@ class Tree {
             return
         }
         
-        var h = self.head
+        var h = self
         
         while true {
             if value <= h.value && h.left == nil {
@@ -74,4 +91,51 @@ class Tree {
         }
     }
     
+}
+
+
+
+
+let headList = ListNode.init(value: 0)
+let oneListNode = ListNode.init(value: 1)
+let twoListNode = ListNode.init(value: 2)
+let threeListNode = ListNode.init(value: 3)
+let fourListNode = ListNode.init(value: 4)
+headList.next = oneListNode
+oneListNode.next = twoListNode
+twoListNode.next = threeListNode
+threeListNode.next = fourListNode
+
+let list = List.init(head: headList)
+
+print(list.printNodes())    // List: 0 1 2 3 4 nil
+
+
+
+
+func buildTreeFromList(head: ListNode?) -> TreeNode? {
+    
+    if head == nil {
+        return nil
+    }
+    
+    
+    var node = head
+    var slowPointer = head
+    var fastPointer = head
+    
+    while node != nil && slowPointer!.next != nil && fastPointer!.next!.next != nil {
+        slowPointer = node!.next
+        fastPointer = fastPointer!.next!.next
+        node = node!.next
+    }
+    
+    var tree = TreeNode.init(value: slowPointer!.value)
+    var left = TreeNode.init(value: head!.value)
+    tree.addNode(node: left)
+    var right = TreeNode.init(value: slowPointer!.next?.value)
+    tree.addNode(node: right)
+    
+    return tree
+
 }

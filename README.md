@@ -29,7 +29,6 @@ whiteboarding practice
 25. - [loop/recursion](https://github.com/JennyShalai/whiteboarding-practice/blob/master/task-25-n!.playground/Contents.swift) - calculate factorial 
 26. - [list](https://github.com/JennyShalai/whiteboarding-practice/blob/master/task-26-reverse-list.playground/Contents.swift) - reverse list
 27. - [string/dict](https://github.com/JennyShalai/whiteboarding-practice/blob/master/task-27-isValid-pattern.playground/Contents.swift) - is valid pattern
-27. - [array/dict](https://github.com/JennyShalai/whiteboarding-practice/blob/master/task-27-sum%3D%3Dbase-in-array.playground/Contents.swift) - sum of two elements is equal to given base
 28. - [if-else](https://github.com/JennyShalai/whiteboarding-practice/blob/master/task-28-who-is-middle-from-three.playground/Contents.swift) - middle value of three integers
 29. - [string/dict](https://github.com/JennyShalai/whiteboarding-practice/blob/master/task-29-string-from-unique-chars.playground/Contents.swift) - string has unique chars
 30. - [matrix](https://github.com/JennyShalai/whiteboarding-practice/blob/master/task-30-matriz-sum-from-0.0-to-x.playground/Contents.swift) - sum all elements in square area from (0,0) to given (x,y) coordinat
@@ -46,3 +45,4 @@ whiteboarding practice
 41. - [list/tree](https://github.com/JennyShalai/whiteboarding-practice/blob/master/task-41-make-tree-from-list-sorted.playground/Contents.swift) - make balanced tree from sorted list
 42. - [array/tree](https://github.com/JennyShalai/whiteboarding-practice/blob/master/task-42-make-tree-from%20array-sorted.playground/Contents.swift) - make balanced tree from sorted array
 43. - [array](https://github.com/JennyShalai/whiteboarding-practice/blob/master/task-43-array-biggest-loss.playground/Contents.swift) - biggest loss
+44. - [array/dict](https://github.com/JennyShalai/whiteboarding-practice/blob/master/task-27-sum%3D%3Dbase-in-array.playground/Contents.swift) - sum of two elements is equal to given base
