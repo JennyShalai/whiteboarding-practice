@@ -3,6 +3,10 @@
 // {(})() -> false
 
 func bracketsValidation(str: String) -> Bool {
+    
+    if str.characters.count % 2 != 0 {
+        return false
+    }
 
     var array: [String] = []
 

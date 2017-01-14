@@ -1,10 +1,13 @@
-// find the shortest sub array starts with 5 and ends with 7
-
-import UIKit
+// find the shortest sub-array starts with 5 and ends with 7
 
 let myArray = [7,5,6,6,7,5,5,4,7,5]
 
 func find(input: [Int]) -> [Int] {
+    
+    if input.count < 2 {
+        return []
+    }
+    
     var startIndex: Int = 0
     var endIndex: Int = Int.max
     var tempIndex: Int = 0
@@ -35,4 +38,4 @@ func find(input: [Int]) -> [Int] {
     return result
 }
 
-print(find(input: myArray))
+print(find(input: myArray)) // [5, 4, 7]

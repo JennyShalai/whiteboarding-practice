@@ -1,6 +1,4 @@
-//: Playground - noun: a place where people can play
-
-import UIKit
+// find distance from given coordinate to any element in matrix
 
 var matrix: [[Int]] = [[0,0,0,0,0],
                        [0,0,0,0,0],

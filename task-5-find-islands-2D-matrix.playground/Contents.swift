@@ -1,6 +1,5 @@
-//: Playground - noun: a place where people can play
+// in given matrix count "islands" of 1 and return the result
 
-import UIKit
 
 var map: [[Int]] = [
     [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
@@ -25,11 +24,14 @@ var map: [[Int]] = [
 
 
 func islands(X: Int, Y: Int) -> Int {
+    
     // count islands
     var counter: Int = 0
-    // for each element check
+    
+    // for each coordinate check
     for y in Y..<map.count {
         for x in X..<map.first!.count {
+            
             // if "land" found - check "neighbours"
             if map[y][x] == 1 {
                 counter += 1
@@ -46,30 +48,26 @@ func check(X: Int, Y: Int) {
     // "drown" land
     map[Y][X] = 0
     
-    // check if neighbours are also a "land"
-    // for right
-    
+    //// check if neighbours are also a "land"
+    //   for right
     if X + 1 < map.first!.count && map[Y][X + 1] == 1 {
         check(X: X+1, Y: Y)
-        
     }
     
-    // for left
+    //   for left
     if X - 1 > 0 && map[Y][X-1] == 1 {
         check(X: X-1, Y: Y)
-        
     }
     
-    // for bottom
+    //   for bottom
     if Y+1 < map.count && map[Y+1][X] == 1 {
         check(X: X, Y: Y+1)
-        
     }
     
-    // for top
+    //   for top
     if Y-1 > 0 && map[Y-1][X] == 1 {
         check(X: X, Y: Y-1)
     }
 }
 
-print(islands(X: 0, Y: 0))
+print(islands(X: 0, Y: 0))  // 4

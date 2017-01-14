@@ -6,13 +6,13 @@
 
 func tr(str1: String, str2: String, str3: String) -> String {
     
-    var dict: [Character: Character] = [:]
-    var result: String = ""
-    
     // check that each has it's replacement char
     if str1.characters.count != str2.characters.count {
         return "error: coder is not completed"
     }
+    
+    var dict: [Character: Character] = [:]
+    var result: String = ""
     
     // build a coder dictionary: 
     // key is a char, value is replacement for it

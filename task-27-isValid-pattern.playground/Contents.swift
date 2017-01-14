@@ -1,4 +1,4 @@
-import UIKit
+import UIKit // needed for components(separatedBy:)
 
 func isValidToPattern(input: String, pattern: String) -> Bool {
 
@@ -15,7 +15,6 @@ func isValidToPattern(input: String, pattern: String) -> Bool {
     for (i, elem) in arrayOfWords.enumerated() {
     
         let char = String(pattern[pattern.index(pattern.startIndex, offsetBy: i)])
-        print(char)
         
         if dictWords[elem] == nil && dictChars[char] == nil {
             dictWords[elem] = char

@@ -1,8 +1,13 @@
-// make the longest polindrom from given string
+// make the longest palindrome from a given string
 
-import UIKit
+import UIKit // needed for appending func
 
 func longest(input: String) -> String {
+    
+    if input.characters.count < 2 {
+        return input
+    }
+    
     var dictionary: [String: Int] = [:]
     var out: String = ""
     var oddLength: Int = 0
@@ -54,6 +59,6 @@ func longest(input: String) -> String {
     
 }
 
-let input = "7a7fafaabdfcfff"
-print(longest(input: input))
+
+print(longest(input: "7a7fafaabdfcfff"))
 // fffaa7b7aafff

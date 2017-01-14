@@ -1,7 +1,12 @@
-// Implement an aalgorithm to determine if a string has all unique characters. And print non-unique chars.
+// Implement an algorithm to determine if a string has all unique characters. 
+// Print non-unique chars.
 
 
 func isUniqueCharsString(str: String) -> Bool {
+    
+    if str.characters.count <= 0 {
+        return true
+    }
     
     var result: Bool = true
     var dict: [String: Int] = [:]
@@ -30,7 +35,6 @@ func isUniqueCharsString(str: String) -> Bool {
     }
     
     return result
-
 }
 
 

@@ -1,4 +1,4 @@
-// if element in NxM matrix is 1, make it's row and column all 0 as well
+// if element in NxM matrix is 1, make it's row and column all 1 as well
 
 
 func markRowAndColumn(input: [[Int]]) -> [[Int]] {

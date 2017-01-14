@@ -1,6 +1,6 @@
-//: Playground - noun: a place where people can play
+// not done!
+// in given matrix
 
-import UIKit
 
 var mtrValue: [[Int]] = [[0,0,0,0,0,5],
                          [0,0,0,0,5,4],

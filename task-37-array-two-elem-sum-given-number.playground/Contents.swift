@@ -1,7 +1,7 @@
 // Given an unsorted array of positive integers, 
 // determine if any two numbers in the array add to 100
 // [1, 2, 4, 50] // false
-// [1, 4, 96, 65, 30] // ture
+// [1, 4, 96, 65, 30] // true
 
 ////////////////////////   O(N2)   //////////////////////////
 func isTowElemsHundred_N2(array: [Int]) -> Bool {
