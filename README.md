@@ -34,11 +34,15 @@ whiteboarding practice
 29. - [string/dict](https://github.com/JennyShalai/whiteboarding-practice/blob/master/task-29-string-from-unique-chars.playground/Contents.swift) - string has unique chars
 30. - [matrix](https://github.com/JennyShalai/whiteboarding-practice/blob/master/task-30-matriz-sum-from-0.0-to-x.playground/Contents.swift) - sum all elements in square area from (0,0) to given (x,y) coordinat
 31. - [string/stack](https://github.com/JennyShalai/whiteboarding-practice/blob/master/task-31-delete-equal-char-pairs.playground/Contents.swift) - remove pair of the same chars
-32. - [if-else](https://github.com/JennyShalai/whiteboarding-practice/blob/master/task-32-Multiples-Of-3-and-5.playground/Contents.swift) Project Euler - sum of all the multiples of 3 or 5 below 1000
-33. - []()
-34. - []()
-35. - []()
-36. - []()
-37. - []()
-38. - []()
-39. - []()
+32. - [if-else/logic](https://github.com/JennyShalai/whiteboarding-practice/blob/master/task-32-Multiples-Of-3-and-5.playground/Contents.swift) - Project Euler - sum of all the multiples of 3 or 5 below 1000
+33. - [if-else/logic](https://github.com/JennyShalai/whiteboarding-practice/blob/master/task-33-Fibonacci-Sum-Even-Numbers.playground/Contents.swift) - Project Euler - Fibonacci even numbers sum
+34. - [if-else/logic](https://github.com/JennyShalai/whiteboarding-practice/blob/master/task-34-largest-prime-factor.playground/Contents.swift) - Project Euler - lagest prime factor
+35. - [if-else/logic](https://github.com/JennyShalai/whiteboarding-practice/blob/master/task-35-max-palindrom-6-digits-number.playground/Contents.swift) - Project Euler - largest palindrome made from the product of two 3-digit numbers
+36. - [if-else]() - bad solution
+37. - [array/dict](https://github.com/JennyShalai/whiteboarding-practice/blob/master/task-37-array-two-elem-sum-given-number.playground/Contents.swift) - sum of two elements is equal to given base
+38. - [string/recursion](https://github.com/JennyShalai/whiteboarding-practice/blob/master/task-38-string-reverse-iteratively-recursively.playground/Contents.swift) - reverse string
+39. - [list](https://github.com/JennyShalai/whiteboarding-practice/blob/master/task-39-Segregate-even-and-odd-nodes-linked-list.playground/Contents.swift) - segregate even and odd nodes
+40. - [matrix](https://github.com/JennyShalai/whiteboarding-practice/blob/master/task-40-matrix-N-roads-variations.playground/Contents.swift) - number of roads variations
+41. - [list/tree](https://github.com/JennyShalai/whiteboarding-practice/blob/master/task-41-make-tree-from-list-sorted.playground/Contents.swift) - make balanced tree from sorted list
+42. - [array/tree](https://github.com/JennyShalai/whiteboarding-practice/blob/master/task-42-make-tree-from%20array-sorted.playground/Contents.swift) - make balanced tree from sorted array
+43. - [array](https://github.com/JennyShalai/whiteboarding-practice/blob/master/task-43-array-biggest-loss.playground/Contents.swift) - biggest loss
