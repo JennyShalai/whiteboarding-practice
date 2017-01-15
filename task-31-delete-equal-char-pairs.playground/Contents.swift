@@ -15,7 +15,7 @@ func deletePair(string: String) -> String {
     var currentIndex = 0
     for (index, char) in result.characters.enumerated() {
         if index > 0 && index < result.characters.count {
-            if String(char) == currentChar {
+            if String(char) == currentChar && index == currentIndex + 1 {
                 result.remove(at: result.index(result.startIndex, offsetBy: index))
                 result.remove(at: result.index(result.startIndex, offsetBy: currentIndex))
                 result = deletePair(string: result)
@@ -63,7 +63,7 @@ class Stack {
     
 }
 
-func answerNoRecursion(string: String) -> String {
+func answerWithStack(string: String) -> String {
     let stack = Stack()
     for char in string.characters {
         if stack.peek() != char {
@@ -85,7 +85,7 @@ func answerNoRecursion(string: String) -> String {
 
 print("1: \(answerWithRecursion(string: "accdddedcc"))")    // aded
 print("2: \(answerWithRecursion(string: "cdeedcn"))")       // n
-print("3: \(answerNoRecursion(string:   "accdddedcc"))")    // aded
-print("4: \(answerNoRecursion(string:   "cdeedcn"))")       // n
+print("3: \(answerWithStack(string:   "accdddedcc"))")      // aded
+print("4: \(answerWithStack(string:   "cdeedcn"))")         // n
 
 
