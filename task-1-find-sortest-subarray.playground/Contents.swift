@@ -1,17 +1,15 @@
 // find the shortest sub-array starts with 5 and ends with 7
 
-let myArray = [7,5,6,6,7,5,5,4,7,5]
-
 func find(input: [Int]) -> [Int] {
     
     if input.count < 2 {
         return []
     }
     
-    var startIndex: Int = 0
-    var endIndex: Int = Int.max
-    var tempIndex: Int = 0
-    var isFive: Bool = false
+    var startIndex = -1
+    var endIndex = input.count
+    var tempIndex = 0
+    var isFive = false
     var result: [Int] = []
     
     for (index, element) in input.enumerated() {
@@ -30,12 +28,18 @@ func find(input: [Int]) -> [Int] {
         }
     }
     
-    // form result sub array
-    for i in startIndex...endIndex {
-        result.append(input[i])
+    
+    if startIndex >= 0 && endIndex < input.count {
+        // form result sub array
+        for i in startIndex...endIndex {
+            result.append(input[i])
+        }
     }
     
     return result
 }
 
-print(find(input: myArray)) // [5, 4, 7]
+let myArray = [7,5,6,6,7,5,5,4,7,5]
+
+print(find(input: [6,7,8]))     // []
+print(find(input: myArray))     // [5, 4, 7]
