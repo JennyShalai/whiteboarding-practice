@@ -50,4 +50,6 @@ my whiteboarding practice on Swift 3
 46. - [list](https://github.com/JennyShalai/whiteboarding-practice/blob/master/task-46-list-palindrome.playground/Contents.swift) - list palindrome
 47. - [list](https://github.com/JennyShalai/whiteboarding-practice/blob/master/task-47-list-sum-two-numbers.playground/Contents.swift) - sum two nimbers represented as lists
 48. - [list](https://github.com/JennyShalai/whiteboarding-practice/blob/master/task-48-list-partition-around-given-value.playground/Contents.swift) - partition list around given value
-49. - []() - 
+49. - [matrix](https://github.com/JennyShalai/whiteboarding-practice/blob/master/task-49-matrix-print-spiral.playground/Contents.swift) - print matrix by spiral
+50. - [matrix](https://github.com/JennyShalai/whiteboarding-practice/blob/master/task-50-matrix-print-diagonals.playground/Contents.swift) - print matrix by diagonals
+51. - [string/stack](https://github.com/JennyShalai/whiteboarding-practice/blob/master/task-51-string-stack-decoder.playground/Contents.swift)
