@@ -5,10 +5,10 @@ import Foundation
 
 class Stack {
 
-    var stack: [String] = []
-    var counter = 0
-    let numbersSet = CharacterSet.decimalDigits
-    let lettersSet = CharacterSet.letters
+    private var stack: [String] = []
+    private var counter = 0
+    private let numbersSet = CharacterSet.decimalDigits
+    private let lettersSet = CharacterSet.letters
     
     func push(val: String) {
         if val != "]" {
@@ -37,7 +37,11 @@ class Stack {
         }
     }
     
-    func peek() -> String {
+    func printStach() {
+        print(st.stack.joined(separator:""))
+    }
+    
+    private func peek() -> String {
         if self.stack.count > 0 {
             return self.stack.last!
         } else {
@@ -45,7 +49,7 @@ class Stack {
         }
     }
     
-    func decode() {
+    private func decode() {
         var letters = ""
         var numbers = ""
         var result = ""
@@ -91,6 +95,8 @@ class Stack {
         
     }
     
+    
+    
 }
 
 //3[a2[bd]g4[ef]h]
@@ -111,7 +117,9 @@ st.push(val: "f")
 st.push(val: "]")
 st.push(val: "h")
 st.push(val: "]")
-print(st.stack.joined(separator:"")) // abdbdgefefefefhabdbdgefefefefhabdbdgefefefefh
+
+st.printStach() // abdbdgefefefefhabdbdgefefefefhabdbdgefefefefh
+
 
 
 
